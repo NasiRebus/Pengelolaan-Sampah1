@@ -1,0 +1,213 @@
+body {
+  background-color: #ac715b;
+}
+
+#wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: hidden;
+}
+
+#container {
+  height: 100%;
+  width: fit-content;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#container2 {
+  height: 100%;
+  width: fit-content;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#bg {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+.sprite {
+  width: 12%;
+  position: absolute;
+  cursor: pointer;
+  border: dotted transparent 1px;
+  border-radius: 1px;
+  padding: 2%;
+  transition: border 0.25s;
+}
+
+.sprite:hover {
+  border: dotted white 1px;
+}
+
+.sprite2 {
+  width: 12%;
+  position: absolute;
+  cursor: pointer;
+}
+
+#soundImage {
+  left: 4%;
+  top: 0%;
+  width: 20%;
+}
+
+#container[data-scene="1"] #dimasAmelia {
+  left: 0%;
+  top: 0%;
+  width: 100%;
+}
+
+#container[data-scene="2"] #trashcans {
+  left: 7%;
+  top: 69%;
+  width: 90%;
+}
+
+#container[data-scene="3"] #medal {
+  left: 37%;
+  top: 13%;
+}
+
+#container[data-scene="3"] #poster1 {
+  left: 38%;
+  top: 28%;
+  width: 15%;
+}
+
+#container[data-scene="3"] #poster3 {
+  left: 4.6%;
+  top: 38.4%;
+  width: 7%;
+}
+
+#container[data-scene="3"] #poster2 {
+  left: 14%;
+  top: 25%;
+  width: 13%;
+}
+
+#container[data-scene="3"] #bin {
+  left: 67%;
+  top: 39%;
+  width: 15%;
+}
+
+#container[data-scene="3"] #danger {
+  left: 23%;
+  top: 65.4%;
+  width: 9%;
+}
+
+#container[data-scene="3"] #book {
+  left: 68%;
+  top: 57%;
+  width: 19%;
+}
+
+#container[data-scene="3"] #poster4 {
+  left: 15%;
+  top: 37%;
+  width: 19%;
+}
+
+#container[data-scene="3"] #tablet {
+  left: 25%;
+  top: 54%;
+  width: 19%;
+}
+
+#switcher {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+#switcher div {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+  background-color: #8f4439;
+  color: white;
+  display: inline-flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.25s;
+  cursor: default;
+}
+
+#switcher .active {
+  color: black;
+  background-color: #b6aa61;
+}
+
+#switcher div:hover:not(.active) {
+  transform: scale(1.5);
+  cursor: pointer;
+  background-color: darkred;
+}
+
+#popup {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.25s;
+}
+
+#popupBody {
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+#popupControls {
+  width: 0;
+  position: relative;
+}
+
+#popup:not(.open), #popup:not(.open) #popupCloser {
+  top: 100%;
+}
+
+#popupImg {
+  min-width: 60%;
+  width: 600px;
+  max-width: calc(100% - 20px);
+  height: fit-content;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#popupCloser {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+#popupCloser:hover {
+  filter: brightness(150%);
+}
